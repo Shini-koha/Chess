@@ -1,0 +1,81 @@
+<html>
+<link rel='stylesheet' href="stylegame.css">
+
+<head>
+	<div id='khungdau'>
+		<div id='box1' class="khungnho"> Trang chủ </div>
+		<p class="vachngan">  </p>
+		<div id='box2' class="khungnho"> Cách chơi </div>
+		<p class="vachngan">  </p>
+		<div id='box3' class="khungnho"> Bảng xếp hạng</div>
+		<p class="vachngan">  </p>
+		<div id='box4' class="khungnho"> Thông tin tài khoản</div>
+		<p class="vachngan">  </p>
+		<div class="dangnhap"> <button id='loginbtn'> <b> Đăng nhập <b> </button> </div>
+		<div class="dangki"> <button id="signupbtn"> <b> Đăng kí <b> </button> </div>
+		<div id="thongtindangnhap">
+			<form id='khungdangnhap'> 
+					<input  class='box' type="text" placeholder="Tên tài khoản">
+					<input  class='box' type="password" placeholder="Nhập mật khẩu">
+					<button type="button"  id='nutdangnhap' ><b> Đăng nhập  </b></button>
+					<p class="ghichu"> <b> Bạn chưa có tài khoản ? <b> </p>
+					<button type="button" id="gotosignupbtn"> <b> Đăng kí tài khoản mới <b> </button>
+					<button type="button"  id='backlogin' > <b> Quay lại </b> </button>
+			</form>
+		</div>
+		<div id="thongtindangki">
+			<form id='khungdangki'> 
+					<input  class='box' type="text" placeholder="Tài khoản gmail">
+					<input class='box' type='text' placeholder="Tên tài khoản">
+					<input  class='box' type="password" placeholder="Nhập mật khẩu">
+					<input  class='box' type="password" placeholder="Nhập lại mật khẩu">
+					<button type="button" id='nutdangki'> <b> Đăng kí </b> </button>
+					<div id='khungnhogon'>
+						<button type="button"  id='backsignup' > <b> Quay lại </b> </button>
+						<button type="button" id='gotologinbtn'> <b> Tôi đã có tài khoản </b> </button>
+					</div>
+			</form>
+		</div>
+	</div>
+</head>
+
+<body>
+	<div id='noidungtrangchu'>
+		<img src='https://toquoc.mediacdn.vn/thumb_w/640/280518851207290880/2022/9/13/purrchessbanner-1663035775008-1663035775503803554069.jpg' id='bancovua'>
+	</div>
+	<div id="layout"></div>
+	<script>
+        const nutdangnhap = document.getElementById("loginbtn");
+        const bangdangnhap = document.getElementById("thongtindangnhap");
+        const layout= document.getElementById("layout");
+        const nutdangki = document.getElementById("signupbtn");
+        const bangdangki = document.getElementById("thongtindangki");
+        const backlogin= document.getElementById('backlogin');
+        const backsignup= document.getElementById('backsignup');
+        nutdangnhap.addEventListener("click", () => {
+            thongtindangnhap.style.display = "block";
+            layout.style.display = "block";
+        });
+        nutdangki.addEventListener("click", () => {
+            thongtindangki.style.display = "block";
+            layout.style.display = "block";
+        });
+         backlogin.addEventListener("click", () => {
+            thongtindangnhap.style.display = "none";
+            layout.style.display = "none";
+        });
+         backsignup.addEventListener("click", () => {
+            thongtindangki.style.display = "none";
+            layout.style.display = "none";
+        });
+          gotosignupbtn.addEventListener("click", () => {
+            thongtindangnhap.style.display = "none";
+            thongtindangki.style.display = "block";
+        });
+          gotologinbtn.addEventListener("click", () => {
+            thongtindangki.style.display = "none";
+            thongtindangnhap.style.display = "block";
+        });
+    </script>
+</body>
+</html>
